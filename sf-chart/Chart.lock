@@ -14,11 +14,5 @@ dependencies:
 - name: sf-hasura
   repository: oci://sugarfunge.azurecr.io/helm
   version: 0.1.0
-- name: sf-keycloak
-  repository: oci://sugarfunge.azurecr.io/helm
-  version: 0.1.0
-- name: sf-odoo
-  repository: oci://sugarfunge.azurecr.io/helm
-  version: 0.1.0
-digest: sha256:78ab37015d47359470acf0065af47b6b530eff38b89bbf2c85d180e50866111b
-generated: "2022-01-07T16:15:50.196152783-04:00"
+digest: sha256:4fb51a3e59bcd2006f180e8ff625da9688d42182e1de1edeca00e9a482ee4220
+generated: "2022-01-07T16:23:21.709292472-04:00"
