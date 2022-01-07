@@ -8,6 +8,22 @@ replicaCount: 1
 nameOverride: ""
 fullnameOverride: "sf-chart"
 
+sf-api:
+  imagePullSecrets:
+    - name: sfimages
+
+sf-status:
+  imagePullSecrets:
+    - name: sfimages
+
+sf-explorer:
+  imagePullSecrets:
+    - name: sfimages
+
+sf-node:
+  imagePullSecrets:
+    - name: sfimages
+
 ingress:
   enabled: true
   className: ""
