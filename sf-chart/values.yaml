@@ -1,0 +1,87 @@
+global:
+  cloud:
+    # -- If cloud support should be enabled.
+    enabled: false
+
+replicaCount: 1
+
+nameOverride: ""
+fullnameOverride: "sf-chart"
+
+ingress:
+  enabled: true
+  className: ""
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: auth.local
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: sf-keycloak
+              port:
+                number: 80
+    - host: odoo.local
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: sf-odoo
+              port:
+                number: 80
+    - host: api.local
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: sf-hasura
+              port:
+                number: 80
+    - host: status.local
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: sf-status
+              port:
+                number: 80
+    - host: explorer.local
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: sf-explorer
+              port:
+                number: 80
+    - host: api.node.local
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: sf-api
+              port:
+                number: 80
+    - host: node.local
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: sf-node
+              port:
+                number: 80
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
