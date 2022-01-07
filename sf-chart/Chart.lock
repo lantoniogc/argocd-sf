@@ -1,24 +1,24 @@
 dependencies:
 - name: sf-node
-  repository: file://../services/sf-node
+  repository: oci://sugarfunge.azurecr.io/helm
   version: 0.1.0
 - name: sf-api
-  repository: file://../services/sf-api
+  repository: oci://sugarfunge.azurecr.io/helm
   version: 0.1.0
 - name: sf-explorer
-  repository: file://../services/sf-explorer
+  repository: oci://sugarfunge.azurecr.io/helm
   version: 0.1.0
 - name: sf-status
-  repository: file://../services/sf-status
+  repository: oci://sugarfunge.azurecr.io/helm
   version: 0.1.0
 - name: sf-hasura
-  repository: file://../services/sf-hasura
+  repository: oci://sugarfunge.azurecr.io/helm
   version: 0.1.0
 - name: sf-keycloak
-  repository: file://../services/sf-keycloak
+  repository: oci://sugarfunge.azurecr.io/helm
   version: 0.1.0
 - name: sf-odoo
-  repository: file://../services/sf-odoo
+  repository: oci://sugarfunge.azurecr.io/helm
   version: 0.1.0
-digest: sha256:ef1f41802d86b1410b7ecbac798b49f1e9cd1e5abaef2d2e0a117db5438f3ec8
-generated: "2021-12-08T15:05:22.0985948-04:00"
+digest: sha256:78ab37015d47359470acf0065af47b6b530eff38b89bbf2c85d180e50866111b
+generated: "2022-01-07T16:15:50.196152783-04:00"
