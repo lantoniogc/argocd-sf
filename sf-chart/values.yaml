@@ -18,24 +18,6 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
     kubernetes.io/tls-acme: "true"
   hosts:
-    - host: auth.local
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: sf-keycloak
-              port:
-                number: 80
-    - host: odoo.local
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: sf-odoo
-              port:
-                number: 80
     - host: api.local
       paths:
         - path: /
