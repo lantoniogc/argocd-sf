@@ -78,7 +78,7 @@ ingress:
             service:
               name: sf-node
               port:
-                number: 80
+                number: 9944
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
